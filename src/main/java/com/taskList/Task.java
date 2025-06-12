@@ -28,4 +28,12 @@ public class Task {
         this.taskMethod = taskMethod;
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof Task task) {
+            return task.getTaskName().equals(this.taskName);
+        }
+        return false;
+    }
+
 }
